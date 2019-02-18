@@ -2,8 +2,9 @@
   "name": "vue-toolkit",
   "version": "1.0.0",
   "description": "Helpers for Vue and major Vue modules",
-  "main": "vue-toolkit.js",
+  "main": "src/vue-toolkit.js",
   "scripts": {
+    "dev": "./node_modules/.bin/webpack --config webpack.config.dev.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,7 +22,7 @@
   },
   "homepage": "https://github.com/mavickers/vue-toolkit#readme",
   "dependencies": {
-    "lodash": "^4.17.11"
+    "source-map-loader": "^0.2.4"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^1.0.1",

@@ -1,5 +1,6 @@
 const webpack = require("webpack");
 const merge = require("webpack-merge");
+const path = require("path");
 const commonConfig = require("./webpack.config.common");
 
 const devConfig = {
@@ -7,14 +8,13 @@ const devConfig = {
     devtool: "inline-source-map",
 
     entry: {
-        "vue-toolkit": "./vue-toolkit.js"
+        "vue-toolkit": path.resolve(__dirname, "src/vue-toolkit.js")
     },
 
     output: {
         filename: "vue-toolkit.js",
-        path: "../dist",
+        path: __dirname + "/dist",
         publicPath: "/dist/",
-        // Defining a global var that can used to call functions from within ASP.NET Razor pages.
         library: "vueToolkit"
     },
 

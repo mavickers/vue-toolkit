@@ -1,7 +1,7 @@
 ﻿/*
  * mapStateLazily
  *
- * see the mapStateLazily.readme.md file which should be in the same folder
+ * see the map-state-lazily.readme.md file which should be in the same folder
  *
  */
 
@@ -21,7 +21,7 @@ export default function () {
     }
     if (!_.isNull(namespace) && _.isString(arguments[1])) {
         property = arguments[1].trim();
-         
+
         if (namespace === "") throw functionName + "property may not be empty string";
     }
 
@@ -29,7 +29,7 @@ export default function () {
     const fieldsParam = arguments[fieldsIndex];
 
     // this builds the namespace based on what parameters were passed in; if there
-    // is a property name then the property is validated against the parent and 
+    // is a property name then the property is validated against the parent and
     // throws if the property is not found or not string.
     const getFullNamespace = function (context) {
         if (!namespace) return "";
@@ -58,7 +58,7 @@ export default function () {
     if (!_.isObject(fieldsParam)) throw functionName + "fields argument must be object or array";
 
     if (_.isArray(fieldsParam)) {
-        // the fieldsParam is an array, so iterate through string items, create a 
+        // the fieldsParam is an array, so iterate through string items, create a
         // key / value pair from each item and push onto the fields array
         for (let i = 0; i < fieldsParam.length; i++) {
             if (_.isString(fieldsParam[i])) {
@@ -99,7 +99,7 @@ export default function () {
         exporting[computedKey] = {
             get: function () {
                 // we are not validating the store/state for the get - we are returning the state
-                // directly and there is a use-case where the state value is not available when 
+                // directly and there is a use-case where the state value is not available when
                 // getting; e.g., fetching namespaced state value via computed field.
                 const fullNamespace = getFullNamespace(this);
                 const state = fullNamespace === "" ? this.$store.state : this.$store.state[fullNamespace];

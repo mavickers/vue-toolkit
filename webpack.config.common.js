@@ -2,6 +2,9 @@ const webpack = require("webpack");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 module.exports = {
+    resolve: {
+        extensions: [".ts", ".tsx", ".js", ".json", ".html", ".vue"]
+    },
     module:{
         rules:[
             {
@@ -22,12 +25,8 @@ module.exports = {
         }
     },
     plugins: [
-        // new webpack.ProvidePlugin({
-        //     _: "lodash",
-        // }),
-
         // Clean dist folder.
-        new CleanWebpackPlugin(["../dist"], {
+        new CleanWebpackPlugin(["dist"], {
             "verbose": true // Write logs to console.
         }),
 

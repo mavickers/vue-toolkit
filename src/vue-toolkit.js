@@ -1,11 +1,15 @@
-import vuex from "./vuex/vuex";
+import vuexHelpers from "./vuex-helpers/vuex-helpers";
 
-export const mapStateLazily = vuex.mappings.mapStateLazily;
+/*
+ * Vuex Helpers
+ *
+ */
 
-export const buildMutations = vuex.mutations.buildMutations;
-export const noMutator = vuex.mutations.noMutator;
-export const straightMutator = vuex.mutations.straightMutator;
+// mappers
+export const mapStateLazily = vuexHelpers.mappings.mapStateLazily;
 
-export default {
-    vuex: vuex
-}
+// mutations
+export const buildMutations = vuexHelpers.mutations.buildMutations;
+export const noMutator = vuexHelpers.mutations.noMutator;
+export const straightMutator = vuexHelpers.mutations.straightMutator;
+
