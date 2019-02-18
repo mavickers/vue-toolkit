@@ -19,5 +19,14 @@
   "bugs": {
     "url": "https://github.com/mavickers/vue-toolkit/issues"
   },
-  "homepage": "https://github.com/mavickers/vue-toolkit#readme"
+  "homepage": "https://github.com/mavickers/vue-toolkit#readme",
+  "dependencies": {
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^1.0.1",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3",
+    "webpack-merge": "^4.2.1"
+  }
 }

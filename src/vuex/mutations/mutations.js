@@ -3,8 +3,9 @@
  *
  */
 
-import noMutator from "./noMutator/noMutator";
-import straightMutator from "./straightMutator/straightMutator";
+import _ from "lodash";
+import noMutator from "./no-mutator/no-mutator";
+import straightMutator from "./straight-mutator/straight-mutator";
 
 export default {
     buildMutations: function(state, config) {

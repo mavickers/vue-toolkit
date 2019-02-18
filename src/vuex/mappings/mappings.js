@@ -3,7 +3,7 @@
  *
  */
 
-import mapStateLazily from "./mappings/mapStateLazily";
+import mapStateLazily from "./mapStateLazily/mapStateLazily";
 
 export default {
     mapStateLazily: mapStateLazily
