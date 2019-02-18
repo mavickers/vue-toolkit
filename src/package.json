@@ -1,0 +1,23 @@
+{
+  "name": "vue-toolkit",
+  "version": "1.0.0",
+  "description": "Helpers for Vue and major Vue modules",
+  "main": "vue-toolkit.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mavickers/vue-toolkit.git"
+  },
+  "keywords": [
+    "vue",
+    "vuex"
+  ],
+  "author": "Michael A. Vickers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mavickers/vue-toolkit/issues"
+  },
+  "homepage": "https://github.com/mavickers/vue-toolkit#readme"
+}
