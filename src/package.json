@@ -1,8 +1,8 @@
 {
-  "name": "vue-toolkit",
-  "version": "1.0.0",
+  "name": "@mavickers/vue-toolkit",
+  "version": "1.0.1",
   "description": "Helpers for Vue and major Vue modules",
-  "main": "src/vue-toolkit.js",
+  "main": "vue-toolkit.js",
   "scripts": {
     "dev": "./node_modules/.bin/webpack --config webpack.config.dev.js",
     "watchbuild": "./node_modules/.bin/watch 'node watch.js' --interval=1",
