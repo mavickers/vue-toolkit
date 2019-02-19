@@ -3,7 +3,7 @@ const copy = require("recursive-copy");
 const jsonFile = require("jsonfile");
 
 const copyOptions = {
-    filter: [ /^((?!(node_modules|package-lock\.json|watch\.js)).)*$/ ]
+    filter: [ /^((?!(node_modules|\.idea|package-lock\.json|watch\.js)).)*$/ ]
 };
 
 async function main() {
@@ -20,11 +20,12 @@ async function main() {
         delete obj.scripts.watchbuild;
 
         await jsonFile.writeFile("../dist/package.json", obj, { spaces: 4, EOL: "\r\n" });
+
+        console.log("build complete\r\n");
     }
     catch(err){
         console.log(err);
     }
-
 }
 
 main();
