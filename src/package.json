@@ -1,6 +1,6 @@
 {
   "name": "@mavickers/vue-toolkit",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Helpers for Vue and major Vue modules",
   "main": "vue-toolkit.js",
   "scripts": {
