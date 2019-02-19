@@ -5,6 +5,7 @@
   "main": "src/vue-toolkit.js",
   "scripts": {
     "dev": "./node_modules/.bin/webpack --config webpack.config.dev.js",
+    "watchbuild": "./node_modules/.bin/watch 'node watch.js' --interval=1",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,10 +26,9 @@
     "lodash": "^4.17.11"
   },
   "devDependencies": {
-    "clean-webpack-plugin": "^1.0.1",
-    "source-map-loader": "^0.2.4",
-    "webpack": "^4.29.5",
-    "webpack-cli": "^3.2.3",
-    "webpack-merge": "^4.2.1"
+    "del": "^3.0.0",
+    "jsonfile": "^5.0.0",
+    "recursive-copy": "^2.0.10",
+    "watch": "^1.0.2"
   }
 }
