@@ -12,6 +12,6 @@ export const noMutator = vuexMutations.noMutator;
 export const straightMutator = vuexMutations.straightMutator;
 
 export default {
-    mappings: mappings,
-    mutations: mutations
+    mappings: vuexMappings,
+    mutations: vuexMutations
 }

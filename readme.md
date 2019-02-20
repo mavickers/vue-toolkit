@@ -26,7 +26,7 @@ vue-toolkit
     |       +-- noMutator
     |       +-- straightMutator
     |
-    |   (the following are aliases to tree structure beneath vuex)
+    |   (the following are aliases to tree structure beneath vuexHelpers)
     |
     +-- vuexMappings 
     +-- vuexMutations 
