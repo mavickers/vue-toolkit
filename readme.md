@@ -93,23 +93,22 @@ export default {
 
 ## Vuex Helpers
 
-### Mappings
-
+### [Mappings][6]
 
 #### [map-state-lazily][1]
 This method is intended to be used in place of mapState/mapAction. I was running into a situation with these would throw an error on page load of namespaced stores because the accessors were apparently not available yet, although they would work fine afterwards. So instead of evaluating the accessors immediately it checks them when used and will throw at that time if they are not valid. Hence the name "lazy".
 
 Then I needed a way to have each instance of a component and it's own store to have unique namespace. A static namespace for a Vuex store in a component has the same name across all the instances of the component, so mapStateLazily has an optional parameter to include a component property as part of the store namespace.
 
-### Mutations
+### [Mutations][3]
 
 #### [buildMutations][2]
 A method for building a set of repetitive mutations against a given state object. 
 
-#### no-mutator
+#### [no-mutator][4]
 This is a mutation function that does nothing. It returns null. It should only be used to indicate that the store field being processed in buildMutations should not have a mutation associated with it.
 
-#### straight-mutator
+#### [straight-mutator][5]
 This is a mutation function that merely assigns the given value straight back to the store field.
 
 ## License
@@ -126,3 +125,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 [1]: https://github.com/mavickers/vue-toolkit/blob/master/vuex-helpers/mappings/map-state-lazily/
 [2]: https://github.com/mavickers/vue-toolkit/tree/master/vuex-helpers/mutations#buildMutations
+[3]: https://github.com/mavickers/vue-toolkit/tree/master/vuex-helpers/mutations
+[4]: https://github.com/mavickers/vue-toolkit/tree/master/vuex-helpers/mutations#noMutator
+[5]: https://github.com/mavickers/vue-toolkit/tree/master/vuex-helpers/mutations#straightMutator
+[6]: https://github.com/mavickers/vue-toolkit/tree/master/vuex-helpers/mappings
+
