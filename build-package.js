@@ -3,10 +3,10 @@ const copy = require("recursive-copy");
 const jsonFile = require("jsonfile");
 
 // change this to your liking
-const distFolder = "../../../dist";
+const distFolder = "../../dist";
 
 const copyOptions = {
-    filter: [ /^((?!(node_modules|\.idea|package-lock\.json|watch\.js)).)*$/ ]
+    filter: [ /^((?!(node_modules|\.idea|package-lock\.json|build-package\.js)).)*$/ ]
 };
 
 async function main() {

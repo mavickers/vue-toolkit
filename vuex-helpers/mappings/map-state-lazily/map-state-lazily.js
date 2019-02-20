@@ -1,7 +1,7 @@
 ﻿/*
  * mapStateLazily
  *
- * see the map-state-lazily.readme.md file which should be in the same folder
+ * see the readme.md file which should be in the same folder
  *
  */
 

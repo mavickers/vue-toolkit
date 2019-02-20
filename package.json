@@ -4,8 +4,7 @@
   "description": "Helpers for Vue and major Vue modules",
   "main": "vue-toolkit.js",
   "scripts": {
-    "dev": "./node_modules/.bin/webpack --config webpack.config.dev.js",
-    "watchbuild": "./node_modules/.bin/watch 'node watch.js' --interval=1",
+    "build-package": "node build-package.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
