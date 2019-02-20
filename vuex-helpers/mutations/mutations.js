@@ -43,7 +43,7 @@ export default {
                         break;
                     }
                     default: {
-                        mutations[processingKey] = mutator;
+                        mutations[processingKey] = mutator(processingKey);
                         break;
                     }
 

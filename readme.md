@@ -18,7 +18,7 @@ The module is organized thusly:
 
 ```
 vue-toolkit
-    +-- vuex
+    +-- vuexHelpers
     |   +-- mappings
     |   |   +-- mapStateLazily
     |   +-- mutations

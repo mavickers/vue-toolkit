@@ -2,11 +2,15 @@
 
 This function maps vuex store getter/mutation for a field to a local component computed get/set pair for the same field name, but in a lazy fashion. The out-of-the-box mapState evals the getters/mutations immediately as well as on every get/set while this only evals during a get/set.
 
+I am not in love with the name of this method. It may change eventually.
+
 ## Use Case
 
 ### General
 
 While (I think) this can be used to replace mapState in general, the reason I wrote it was to suppress the vuex error received when adding a watch to a computed property that is coming from namespaced state. On setup of the watch the getter/setter is eval'd and you received an error from vuex stating that the namespace is not valid, although subsequent calls to the get/set will work fine.
+
+### Unique Namespacing For Component Store Instances
 
 In the case of using a property to build the namespace, this arises when using a component that is repeated (such as in a v-for loop) where you want to maintain individual state for each instance - otherwise each component instance will be reading/modifying the same state. Assuming you inject a unique identifier into the component via props, the uid can be used to namespace the state in the mapper.
  
