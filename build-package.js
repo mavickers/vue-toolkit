@@ -6,7 +6,7 @@ const jsonFile = require("jsonfile");
 const distFolder = "../../dist";
 
 const copyOptions = {
-    filter: [ /^((?!(node_modules|\.idea|package-lock\.json|build-package\.js)).)*$/ ]
+    filter: [ /^((?!(node_modules|\.idea|package-lock\.json|build,-package\.js)).)*$/ ]
 };
 
 async function main() {
