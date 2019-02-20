@@ -16,7 +16,7 @@ In the case of using a property to build the namespace, this arises when using a
  
  ## Usage
 ```
-import { mapStateLazily } from "[path]/VuexToolkit";
+import { mapStateLazily } from "@mavickers/vue-toolkit";
 import store from "[path]/yourStore";
 
 export default {
