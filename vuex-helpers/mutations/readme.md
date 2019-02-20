@@ -1,6 +1,6 @@
 # Mutations
 
-##buildMutations
+## buildMutations
 
 ### Use Case
 
@@ -119,6 +119,7 @@ export const mutations = {
 ```
 
 ## noMutator
-A mutation function that doesn't do anything (it returns null). You shouldn't actually be using it functionally, but rather to indicate that a state field (when processed with _buildMutations_) should not have a mutator attached. [See example in the buildMutations documentation](#example---wildcard-and-nomutator).
+A mutator function that doesn't do anything (it returns null). You shouldn't actually be using it functionally, but rather to indicate that a state field (when processed with _buildMutations_) should not have a mutator attached. [See example in the buildMutations documentation](#example---wildcard-and-nomutator).
 
 ## straightMutator
+A mutator function that merely assigns the given value to the state field. [See example in the buildMutations documentation](#example---wildcard-and-straightmutator).
