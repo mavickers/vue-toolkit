@@ -39,7 +39,7 @@ vue-toolkit
     +-- straightMutator
 ```
 
-###Why is it organized like this?
+### Why is it organized like this?
 
 To allow you to use it a few different ways, whatever you find most readable or expedient in your code.
 
@@ -103,7 +103,7 @@ Then I needed a way to have each instance of a component and it's own store to h
 
 ### Mutations
 
-#### buildMutations
+#### [buildMutations][2]
 A method for building a set of repetitive mutations against a given state object. 
 
 #### no-mutator
@@ -125,3 +125,4 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 [1]: https://github.com/mavickers/vue-toolkit/blob/master/vuex-helpers/mappings/map-state-lazily/
+[2]: https://github.com/mavickers/vue-toolkit/tree/master/vuex-helpers/mutations#buildMutations

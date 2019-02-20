@@ -50,6 +50,8 @@ buildMutations(stateObject, {
 })
 ```
 
+You can instruct buildMutations to apply different mutators to the same field, but only the last one specified will be applied.
+
 #### Example - Standard Mutation Build
 mutations.js
 ```
@@ -97,6 +99,8 @@ export const mutations = {
     someField9: (state, value) => doSomethingDifferent(state, value)
 };
 ```
+
+Because someField5 and someField6 are specified after the wildcard, they will be processed after the wildcard (all the fields in the state object) and will have their mutator (myMutator) removed.
 
 #### Example - Wildcard and straightMutator
 
