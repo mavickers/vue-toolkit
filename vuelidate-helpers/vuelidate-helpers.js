@@ -1,7 +1,7 @@
-import injectValidatorsImport from "./inject-validators/inject-validators";
+import injectValidationsImport from "./inject-validations/inject-validations";
 
-export const injectValidators = injectValidatorsImport;
+export const injectValidations = injectValidationsImport;
 
 export default {
-    injectValidators: injectValidatorsImport
+    injectValidations: injectValidationsImport
 }

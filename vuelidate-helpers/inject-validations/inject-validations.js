@@ -1,12 +1,12 @@
 /*
- * inject-validators
+ * inject-validations
  *
  */
 
 import _ from "lodash";
 import "../../vue-helpers/extensions/extensions";
 
-const functionName = "[inject-validators]";
+const functionName = "[inject-validations]";
 
 export default function(component, newValidations) {
     if (!_.isVueComponent(component)) throw `${functionName} component parameter is not valid`;

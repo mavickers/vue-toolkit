@@ -33,7 +33,7 @@ export const straightMutator = vuexMutations.straightMutator;
  */
 
 export const vuelidateHelpers = vuelidateHelpersImport;
-export const injectValidators = vuelidateHelpersImport.injectValidators;
+export const injectValidations = vuelidateHelpersImport.injectValidations;
 
 
 
