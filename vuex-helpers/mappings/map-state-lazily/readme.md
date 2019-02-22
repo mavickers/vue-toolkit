@@ -14,7 +14,7 @@ While (I think) this can be used to replace mapState in general, the reason I wr
 
 In the case of using a property to build the namespace, this arises when using a component that is repeated (such as in a v-for loop) where you want to maintain individual state for each instance - otherwise each component instance will be reading/modifying the same state. Assuming you inject a unique identifier into the component via props, the uid can be used to namespace the state in the mapper.
  
- ## Usage
+## Usage
 ```
 import { mapStateLazily } from "@mavickers/vue-toolkit";
 import store from "[path]/yourStore";

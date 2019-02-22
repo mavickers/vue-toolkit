@@ -18,6 +18,8 @@ The module is organized thusly:
 
 ```
 vue-toolkit
+    +-- vueHelpers
+    |   +-- extensions
     +-- vuexHelpers
     |   +-- mappings
     |   |   +-- mapStateLazily
@@ -26,17 +28,24 @@ vue-toolkit
     |       +-- noMutator
     |       +-- straightMutator
     |
-    |   (the following are aliases to tree structure beneath vuex)
+    |-- vuelidateHelpers
+    |   +-- injectValidators
+    |
+    |   (the following are aliases to tree structure beneath vuexHelpers)
     |
     +-- vuexMappings 
     +-- vuexMutations 
     |
-    |   (the following are aliases directly to helper methods in the vuex tree)
+    |   (the following are aliases directly to helper methods in the vuexHelpers tree)
     |
     +-- mapStateLazily
     +-- buildMutations
     +-- noMutator
     +-- straightMutator
+    |
+    |   (the following are aliases directly to helper methods in the vuelidateHelpers tree)
+    |
+    +-- injectValidators
 ```
 
 ### Why is it organized like this?
@@ -111,6 +120,11 @@ This is a mutation function that does nothing. It returns null. It should only b
 #### [straight-mutator][5]
 This is a mutation function that merely assigns the given value straight back to the store field.
 
+## Vuelidate Helpers
+
+#### [inject-validators][7]
+This is an injection function which attaches validators to a sub-component. 
+
 ## License
 
 Vue Toolkit is released under the MIT license. So without further ado, here is a copy from OSI's page:
@@ -129,4 +143,5 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 [4]: https://github.com/mavickers/vue-toolkit/tree/master/vuex-helpers/mutations#noMutator
 [5]: https://github.com/mavickers/vue-toolkit/tree/master/vuex-helpers/mutations#straightMutator
 [6]: https://github.com/mavickers/vue-toolkit/tree/master/vuex-helpers/mappings
+[7]: https://github.com/mavickers/vue-toolkit/tree/master/vuelidate-helpers/inject-validators
 
