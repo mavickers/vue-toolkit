@@ -45,7 +45,7 @@ vue-toolkit
     |
     |   (the following are aliases directly to helper methods in the vuelidateHelpers tree)
     |
-    +-- injectValidators
+    +-- injectValidations
 ```
 
 ### Why is it organized like this?
