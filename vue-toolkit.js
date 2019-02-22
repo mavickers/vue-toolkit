@@ -18,7 +18,7 @@ export const vuexHelpers = vuexHelpersImport;
 
 // mappers
 export const vuexMappings = vuexHelpersImport.mappings;
-export const mapStateLazily = vuexMappings.mapStateLazilyMapper;
+export const mapStateLazily = vuexMappings.mapStateLazily;
 
 // mutations
 export const vuexMutations = vuexHelpersImport.mutations;
