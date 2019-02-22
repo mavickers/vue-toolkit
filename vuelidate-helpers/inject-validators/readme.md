@@ -41,8 +41,6 @@ export const Vue = new Vue({
         "subComponent": SubComponent
     },
     mounted() {
-        const 
-    
         injectValidators(this.subComponent, {
             someField: [ value => this.repo.someMethod(value) ]
         });
@@ -53,3 +51,11 @@ export const Vue = new Vue({
 ```
 
 And that's it.
+
+## Notes
+
+- **THIS WILL ONLY WORK IN THE MOUNTED HOOK OF THE PARENT OBJECT.** The component references are not available in beforeCreate() or created(). 
+- injectValidators will throw if there is something wrong with the parameters.
+- If the validation parameter passed in for a field is not a function it is ignored without error.
+- If the validation object does not exist in the sub-component it is created. 
+- If a field is specified that does not exist in the validation object it is created.
