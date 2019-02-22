@@ -122,7 +122,7 @@ This is a mutation function that merely assigns the given value straight back to
 
 ## Vuelidate Helpers
 
-#### [injectValidators][7]
+#### [injectValidations][7]
 This is an injection function which attaches validators to a sub-component. 
 
 ## License
@@ -143,5 +143,5 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 [4]: https://github.com/mavickers/vue-toolkit/tree/master/vuex-helpers/mutations#noMutator
 [5]: https://github.com/mavickers/vue-toolkit/tree/master/vuex-helpers/mutations#straightMutator
 [6]: https://github.com/mavickers/vue-toolkit/tree/master/vuex-helpers/mappings
-[7]: https://github.com/mavickers/vue-toolkit/tree/master/vuelidate-helpers/inject-validators
+[7]: https://github.com/mavickers/vue-toolkit/tree/master/vuelidate-helpers/inject-validations
 
