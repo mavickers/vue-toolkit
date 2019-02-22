@@ -1,15 +1,14 @@
-﻿import vuexMappings from "./mappings/mappings";
-import vuexMutations from "./mutations/mutations";
+﻿import vuexMappingsImport from "./mappings/mappings";
+import vuexMutationsImport from "./mutations/mutations";
 
+export const mappings = vuexMappingsImport;
+export const mutations = vuexMutationsImport;
 
-export const mappings = vuexMappings;
-export const mutations = vuexMutations;
+export const mapStateLazily = vuexMappingsImport.mapStateLazily;
 
-export const mapStateLazily = vuexMappings.mapStateLazily;
-
-export const buildMutations = vuexMutations.buildMutations;
-export const noMutator = vuexMutations.noMutator;
-export const straightMutator = vuexMutations.straightMutator;
+export const buildMutations = vuexMutationsImport.buildMutations;
+export const noMutator = vuexMutationsImport.noMutator;
+export const straightMutator = vuexMutationsImport.straightMutator;
 
 export default {
     mappings: mappings,
