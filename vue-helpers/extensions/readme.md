@@ -2,6 +2,8 @@
 
 This are various and sundry helper methods that don't have a place to stand alone. Since lodash is a dependency I've generally attached them to lodash.
 
+The methods in this module are more or less candidates to be migrated to another package as they generally will not be Vue specific.
+
 ## isVueComponent
 
 ### Usage

@@ -20,6 +20,8 @@ The module is organized thusly:
 vue-toolkit
     +-- vueHelpers
     |   +-- extensions
+    |   +-- eventBus
+    |
     +-- vuexHelpers
     |   +-- mappings
     |   |   +-- mapStateLazily
@@ -99,6 +101,11 @@ export default {
     ...
 }
 ```
+
+## Vue Helpers
+
+### eventBus
+A simple event bus created from a plain Vue object.
 
 ## Vuex Helpers
 

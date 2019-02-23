@@ -23,9 +23,9 @@ export default function(component, newValidations) {
         componentValidations[field] = componentValidations[field] || { };
 
         _.forEach(validations, (validation, index) => {
-            const validatorName = `injected-validator-${_.padLeft(index.toString(), "0", 2)}`;
-
             if (!_.isFunction(validation)) return;
+
+            const validatorName = `injected-validator-${_.padLeft(index.toString(), "0", 2)}`;
 
             componentValidations[field][validatorName] = validation;
         });

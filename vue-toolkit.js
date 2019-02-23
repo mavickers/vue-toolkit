@@ -1,3 +1,4 @@
+import vueHelpersImport from "./vue-helpers/vue-helpers";
 import vuexHelpersImport from "./vuex-helpers/vuex-helpers";
 import vuelidateHelpersImport from "./vuelidate-helpers/vuelidate-helpers";
 
@@ -7,7 +8,9 @@ import vuelidateHelpersImport from "./vuelidate-helpers/vuelidate-helpers";
  *
  */
 
+export const vueHelpers = vueHelpersImport;
 
+export const eventBus = vueHelpersImport.eventBus;
 
 /*
  * Vuex Helpers
@@ -33,13 +36,14 @@ export const straightMutator = vuexMutations.straightMutator;
  */
 
 export const vuelidateHelpers = vuelidateHelpersImport;
+
 export const injectValidations = vuelidateHelpersImport.injectValidations;
 
 
 
 
-
 export default {
-    vuex: vuexHelpersImport
+    vuex: vuexHelpersImport,
+    vuelidate: vuelidateHelpersImport
 }
 
