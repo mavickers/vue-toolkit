@@ -39,12 +39,13 @@ export default {
 			...
 		}),
 		// namespacing that includes a component property value
-		...mapStateLazily("namespace", "instanceId", [ "field1", "field2", ... ]),
-		...mapStateLazily("namespace", "instanceId", {
+		...mapStateLazily("namespace", "propertyName", [ "field1", "field2", ... ]),
+		...mapStateLazily("namespace", "propertyName", {
 			internalFieldName1: "storeFieldName1",
 			internalFieldName2: "storeFieldName2",
 			...
-		})
+		}),
+		...mapStateLazily("namespace", "propertyName.subPropertyName", [ "field1", "field2", ... ]),
 	},
 	created() {
 		// no namespacing
@@ -69,6 +70,7 @@ export default {
 - Namespace is optional.
 - Property is optional and should be a reference to a property of the parent component. If the property does not exist it will throw. If a valid property is included it will be appended to the namespace with a slash. e.g.
   - mapStateLazily("namespace", ["field"]) = "namespace/\{field\}"
-  - mapStateLazily("namespace", "property", ["field"]) = "namespace/property/\{field\}
+  - mapStateLazily("namespace", "propertyValue", ["field"]) = "namespace/\{component.propertyValue\}/\{field\}
+  - mapStateLazily("namespace", "propertyValue.subPropertyValue", ["field"]) = "namespace/\{component.propertyValue.subPropertyValue\}/\{field\}
 - Field names specified in mapFields must exist either in root or specified namespace
 
