@@ -30,7 +30,7 @@ vue-toolkit
     |       +-- noMutator
     |       +-- straightMutator
     |
-    |-- vuelidateHelpers
+    +-- vuelidateHelpers
     |   +-- injectValidators
     |
     |   (the following are aliases to tree structure beneath vuexHelpers)

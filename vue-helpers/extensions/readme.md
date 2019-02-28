@@ -30,6 +30,8 @@ _.padLeft(sourceString, paddingCharacter, minLength)
 
 ### Example
 
+```
 _.padLeft("1", "0", 4)
 
 // => "0001"
+```

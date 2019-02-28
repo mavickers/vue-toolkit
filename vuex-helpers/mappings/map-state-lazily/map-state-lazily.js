@@ -9,7 +9,7 @@ export default function () {
     const functionName = "[VuexMappers.mapStateLazily] ";
     const exporting = {};
     let namespace = null;
-    let property = null;
+    let properties = null;
     let fields = null;
 
     // first let's parse/validate the arguments
@@ -20,12 +20,12 @@ export default function () {
         if (namespace === "") throw functionName + "namespace may not be empty string";
     }
     if (!_.isNull(namespace) && _.isString(arguments[1])) {
-        property = arguments[1].trim();
+        properties = arguments[1].trim();
 
         if (namespace === "") throw functionName + "property may not be empty string";
     }
 
-    const fieldsIndex = namespace === null ? 0 : property === null ? 1 : 2;
+    const fieldsIndex = namespace === null ? 0 : properties === null ? 1 : 2;
     const fieldsParam = arguments[fieldsIndex];
 
     // this builds the namespace based on what parameters were passed in; if there
@@ -33,11 +33,26 @@ export default function () {
     // throws if the property is not found or not string.
     const getFullNamespace = function (context) {
         if (!namespace) return "";
-        if (!property) return namespace;
-        if (fieldsParam.includes(property)) throw functionName + "field parameters may not include property parameter (this will cause a HACF loop)";
-        if (!_.isString(context[property])) throw functionName + "context is missing specified property '" + property + "'";
+        if (!properties) return namespace;
 
-        return namespace + "/" + context[property].trim();
+        const propertyArray = _.map(properties.split("."), item => item.trim());
+        let finalProperty = context;
+
+        if (propertyArray.length === 1 && fieldsParam.includes(propertyArray[0])) throw functionName + "field parameters may not include property parameter (this will cause a HACF loop)";
+
+        _.forEach(propertyArray, property => {
+            if (_.isNil(finalProperty[property])) throw functionName + "context is missing specified property '" + properties + "'";
+
+            finalProperty = finalProperty[property];
+        });
+
+        return namespace + "/" + finalProperty.toString();
+        //
+        //
+        // if (fieldsParam.includes(properties)) throw functionName + "field parameters may not include property parameter (this will cause a HACF loop)";
+        // if (!_.isString(context[properties])) throw functionName + "context is missing specified property '" + properties + "'";
+
+        //return namespace + "/" + context[properties].trim();
     };
 
     // this confirms that the store is available
@@ -92,6 +107,7 @@ export default function () {
 
     // parsing/validating done, so let's build the getter/setting exporting object
     for (let i = 0; i < fields.length; i++) {
+
         const field = fields[i];
         const computedKey = Object.keys(field)[0];
         const stateKey = field[computedKey];
