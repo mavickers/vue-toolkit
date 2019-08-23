@@ -41,7 +41,9 @@ export default function () {
         if (propertyArray.length === 1 && fieldsParam.includes(propertyArray[0])) throw functionName + "field parameters may not include property parameter (this will cause a HACF loop)";
 
         _.forEach(propertyArray, property => {
-            if (_.isNil(finalProperty[property])) throw functionName + "context is missing specified property '" + properties + "'";
+            if (_.isNil(finalProperty[property])) {
+                throw functionName + "context is missing specified property '" + properties + "'";
+            }
 
             finalProperty = finalProperty[property];
         });
@@ -58,6 +60,17 @@ export default function () {
     // this confirms that the store is available
     const storeIsValid = function (context) {
         if (_.isNil(context) || _.isNil(context.$store)) throw functionName + "store missing or invalid";
+
+        return true;
+    };
+
+    // this confirms that there is a getter function for the store property
+    const hasCustomGetter = function(context, fieldPath) {
+        if (context == null) return false;
+        if (fieldPath == null) return false;
+        if (context.$store == null) return false;
+        if (context.$store.getters == null) return false;
+        if (context.$store.getters[fieldPath] == null) return false;
 
         return true;
     };
@@ -88,7 +101,7 @@ export default function () {
     else {
         // the fieldsParam is an object, so iterate through the items, create
         // key/value pairs for each item and push it onto the fields array
-        for (const prop in fieldsParam) {
+        for (var prop in fieldsParam) {
             if (fieldsParam.hasOwnProperty(prop)) {
                 if (_.isNull(fieldsParam[prop]) || _.isString(fieldsParam[prop])) {
                     let obj = {};
@@ -118,9 +131,10 @@ export default function () {
                 // directly and there is a use-case where the state value is not available when
                 // getting; e.g., fetching namespaced state value via computed field.
                 const fullNamespace = getFullNamespace(this);
+                const fieldPath = fullNamespace + (_.isEmpty(fullNamespace) ? "" : "/") + stateKey;
                 const state = fullNamespace === "" ? this.$store.state : this.$store.state[fullNamespace];
 
-                return state === undefined ? null : state[stateKey];
+                return hasCustomGetter(this, fieldPath) ? this.$store.getters[fieldPath] : state === undefined ? null : state[stateKey];
             },
             set: function (value) {
                 const fullNamespace = getFullNamespace(this);
