@@ -2,10 +2,10 @@
   "name": "@mavickers/vue-toolkit",
   "version": "1.0.6",
   "description": "Helpers for Vue and major Vue modules",
-  "main": "vue-toolkit.js",
+  "main": "index.js",
   "scripts": {
-    "build-package": "node build-package.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx babel ./ --out-dir ../../dist --ignore node_modules",
+    "build-package": "node build-package.js"
   },
   "repository": {
     "type": "git",
@@ -22,13 +22,21 @@
   },
   "homepage": "https://github.com/mavickers/vue-toolkit#readme",
   "dependencies": {
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.15",
     "vue": "^2.6.7"
   },
   "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-plugin-transform-es2015-template-literals": "^6.22.0",
+    "core-js": "^2.6.9",
     "del": "^3.0.0",
     "jsonfile": "^5.0.0",
+    "npm": "^6.11.2",
+    "path": "^0.12.7",
     "recursive-copy": "^2.0.10",
-    "watch": "^1.0.2"
+    "watch": "^1.0.2",
+    "webpack-merge": "^4.2.1"
   }
 }

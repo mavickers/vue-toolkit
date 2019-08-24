@@ -49,12 +49,6 @@ export default function () {
         });
 
         return namespace + "/" + finalProperty.toString();
-        //
-        //
-        // if (fieldsParam.includes(properties)) throw functionName + "field parameters may not include property parameter (this will cause a HACF loop)";
-        // if (!_.isString(context[properties])) throw functionName + "context is missing specified property '" + properties + "'";
-
-        //return namespace + "/" + context[properties].trim();
     };
 
     // this confirms that the store is available
